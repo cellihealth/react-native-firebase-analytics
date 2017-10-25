@@ -214,11 +214,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../../../ios/Pods/**",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/../../../ios/Frameworks/**",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../react-native/React/**",
 					"$(SRCROOT)/../../../ios/Pods/**",
+					"$(PROJECT_DIR)/../../../ios/Frameworks/**",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -235,10 +237,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../../../ios/Pods/**",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/../../../ios/Frameworks/**",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../react-native/React/**",
 					"$(SRCROOT)/../../../ios/Pods/**",
+					"$(PROJECT_DIR)/../../../ios/Frameworks/**",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
