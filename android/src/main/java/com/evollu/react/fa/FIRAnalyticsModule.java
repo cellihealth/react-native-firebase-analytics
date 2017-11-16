@@ -15,7 +15,7 @@ import android.util.Log;
 import java.util.Iterator;
 
 public class FIRAnalyticsModule extends ReactContextBaseJavaModule implements LifecycleEventListener {
-    private final static String TAG = FIRAnalyticsModule.class.getCanonicalName();
+    private final static String TAG = "RNFIRAnalytics";
 
     public FIRAnalyticsModule(ReactApplicationContext reactContext) {
         super(reactContext);
@@ -31,6 +31,7 @@ public class FIRAnalyticsModule extends ReactContextBaseJavaModule implements Li
     @ReactMethod
     public void setUserId(String id){
         FirebaseAnalytics.getInstance(getReactApplicationContext()).setUserId(id);
+        Log.i(TAG, "Set user id " + id);
     }
 
     @ReactMethod
@@ -41,6 +42,7 @@ public class FIRAnalyticsModule extends ReactContextBaseJavaModule implements Li
     @ReactMethod
     public void logEvent(String name, ReadableMap parameters) {
         FirebaseAnalytics.getInstance(getReactApplicationContext()).logEvent(name, Arguments.toBundle(parameters));
+        Log.i(TAG, "Log event " + name);
     }
 
     @ReactMethod
@@ -51,6 +53,7 @@ public class FIRAnalyticsModule extends ReactContextBaseJavaModule implements Li
                 @Override
                 public void run() {
                     FirebaseAnalytics.getInstance(getReactApplicationContext()).setCurrentScreen(currentActivity, name, null);
+                    Log.i(TAG, "Set screen name " + name);
                 }
             });
         } else {
